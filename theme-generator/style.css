@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Russo One', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+/* main */
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#color-square {
+  background-color: rgb(0, 0, 0);
+  width: 150px;
+  height: 150px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.generator {
+  width: 450px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+}
+
+#developer-generator {
+  font-size: 20px;
+  color: rgb(110, 110, 110);
+  letter-spacing: 2px;
+  padding-left: 2px;
+}
+
+#theme-generator {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  letter-spacing: 10px;
+  padding: 5px 5px 5px 10px;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1000;
+}
+#theme-generator:hover {
+  letter-spacing: 12px;
+  cursor: pointer;
+  padding: 5px 5px 5px 12px;
+}
+
+#color-generator {
+  font-size: 20px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+}
+#red {
+  color: red;
+}
+#green {
+  color: green;
+}
+#blue {
+  color: blue;
+}
