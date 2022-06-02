@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: #e5eff5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.poster {
+  max-width: 39.75rem;
+  min-height: 29.8125rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "joinUs joinUs" "subscription whyUs";
+}
+.poster > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+}
+.poster__join-us {
+  padding: 2.5rem 2.1875rem;
+  background: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  grid-area: joinUs;
+}
+.poster__join-us .poster__heading-1 {
+  color: #2ab2af;
+}
+.poster__join-us .poster__heading-2 {
+  color: #c0df34;
+}
+.poster__join-us .poster__description {
+  color: #98a6bd;
+}
+.poster__subscription {
+  padding: 2.5rem 2.1875rem;
+  background: #2ab2af;
+  border-bottom-left-radius: 10px;
+  grid-area: subscription;
+}
+.poster__subscription .poster__heading-2 {
+  color: #e5eff5;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.poster__subscription span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.poster__why-us {
+  background: #4bbebe;
+  border-bottom-right-radius: 10px;
+  padding: 2.5rem 2.1875rem;
+  padding-right: 4.369rem;
+  grid-area: whyUs;
+}
+
+@media screen and (max-width: 400px) {
+  .poster {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "joinUs" "subscription" "whyUs";
+  }
+  .poster__subscription {
+    border-bottom-left-radius: 0;
+  }
+  .poster__why-us {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+.poster__sing-up-cta {
+  background: #c0df34;
+  border: none;
+  width: 100%;
+  height: 3.125rem;
+  border-radius: 5px;
+  margin-top: auto;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.poster {
+  font-family: "Karla", sans-serif;
+}
+.poster__heading-1 {
+  margin-bottom: 2.0625rem;
+}
+.poster__heading-2 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+.poster__description {
+  font-size: 1rem;
+}
+.poster .poster__description-2 {
+  color: #e5eff5;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}

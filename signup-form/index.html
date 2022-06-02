@@ -4,43 +4,123 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Challenge-031321-0001</title>
+    <script src="./script.js" defer></script>
+    <title>Signup Form</title>
   </head>
   <body>
-    <main>
-      <section class="poster">
-        <div class="poster__join-us">
-          <h1 class="poster__heading-1">Join our community</h1>
-          <h2 class="poster__heading-2">
-            30-day, hassle-free money back guarantee
-          </h2>
-          <p class="poster__description">
-            Gain access to our full library of tutorials along with expert code
-            reviews. Perfect for any developers who are serious about honing
-            their skills.
+    <main id="main-home">
+      <section class="landing-form">
+        <div class="welcome">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
           </p>
         </div>
-        <div class="poster__subscription">
-          <h1 class="poster__heading-2">Monthly Subscription</h1>
-          <p class="poster__heading-2"><span>$29</span> per month</p>
-          <p class="poster__description">Full access for less than $1 a day</p>
-          <button class="poster__sing-up-cta">Sign Up</button>
+
+        <div class="try-it">
+          <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
         </div>
-        <div class="poster__why-us">
-          <h1 class="poster__heading-2">Why Us</h1>
-          <p class="poster__description-2">
-            Tutorials by industry experts Peer & expert code review Coding
-            exercises <br />
-            Access to our GitHub repos Community forum <br />
-            Flashcard decks <br />
-            New videos every week
+
+        <form class="registration-form">
+          <div id="first-name-field" class="first-name-field field">
+            <input
+              id="first-name-field__input"
+              type="text"
+              name="first-name"
+              placeholder="First Name"
+              required
+            />
+            <img
+              id="first-name__invalid-symbol"
+              src="./assets/icon-error.svg"
+              alt=""
+            />
+            <p id="first-name__invalid-text">
+              <small>First Name cannot be empty</small>
+            </p>
+          </div>
+
+          <div id="last-name-field" class="last-name-field field">
+            <input
+              id="last-name-field__input"
+              type="text"
+              name="last-name"
+              placeholder="Last Name"
+              required
+            />
+            <img
+              id="last-name__invalid-symbol"
+              src="./assets/icon-error.svg"
+              alt=""
+            />
+            <p id="last-name__invalid-text">
+              <small>Last Name cannot be empty</small>
+            </p>
+          </div>
+
+          <div id="email-field" class="email-field field">
+            <input
+              id="email-field__input"
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <img
+              id="email__invalid-symbol"
+              src="./assets/icon-error.svg"
+              alt=""
+            />
+            <p id="email__invalid-text">
+              <small>Email Address cannot be empty</small>
+            </p>
+          </div>
+
+          <div id="password-field" class="password-field field">
+            <input
+              id="password-field__input"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <img
+              id="password__invalid-symbol"
+              src="./assets/icon-error.svg"
+              alt=""
+            />
+            <p id="password__invalid-text">
+              <small>Password cannot be empty</small>
+            </p>
+          </div>
+
+          <div class="submit-field">
+            <button
+              class="registration-form__cta"
+              type="submit"
+              onclick="invalidInput()"
+            >
+              CLAIM YOUR FREE TRIAL
+            </button>
+          </div>
+
+          <p>
+            <small
+              >By clicking the button, you are agreeing to our
+              <span style="color: hsl(0, 100%, 74%)"
+                ><b>Term and Services</b></span
+              ></small
+            >
           </p>
-        </div>
+        </form>
       </section>
     </main>
   </body>
