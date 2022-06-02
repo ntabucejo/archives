@@ -1,0 +1,45 @@
+@use '../1-helpers/variables' as *;
+
+body {
+  font-family: $primary-font-family;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: $white;
+  font-weight: 700;
+}
+
+p {
+  color: $white;
+  font-weight: 400;
+}
+
+input {
+  font-family: $primary-font-family;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+input::placeholder {
+  font-weight: 700;
+}
+
+small {
+  color: $grayish-blue;
+}
+
+button {
+  font-size: 0.93rem;
+  color: $white;
+  font-weight: 700;
+}
+
+.field {
+  small {
+    font-size: 0.7rem;
+    color: $red;
+    font-style: italic;
+    font-weight: 600;
+  }
+}

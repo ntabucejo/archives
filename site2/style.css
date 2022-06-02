@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: rgb(0, 79, 89);
+    font-family: 'Stick', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+/*  header */
+
+header {
+    background-color: rgba(0, 107, 120, 0.2);
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-active {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-active .active-name {
+    text-transform: uppercase;
+}
+
+.nav-active .rect {
+    background-color: rgb(0, 223, 251);
+    width: auto;
+    height: 3px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+
+    display: flex;
+    align-items: center;
+}
+.nav-links li:first-child {
+    margin-left: 0;
+}
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+.nav-links li a:hover {
+    color: rgb(0, 223, 251);
+}
+
+.nav-links img {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/*  main */
+
+.planet-showcase {
+    margin: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet-showcase .planet {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+}
+
+.planet .planet-name {
+    text-transform: uppercase;
+}
+
+.planet img {
+    width: 300px;
+    height: auto;
+    transition: 0.3s;
+}
+.planet img:hover {
+    width: 400px;
+    height: auto;
+    transform: rotate(15deg);
+}
+
+/*  footer */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: auto;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.made-by {
+    text-transform: capitalize;
+}
+
+.made-by span {
+    color: rgb(0, 223, 251);
+}

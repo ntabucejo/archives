@@ -1,0 +1,20 @@
+#main-home {
+  min-height: 100vh;
+  background-image: url("../../libraries/images/bg-intro-mobile.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5625rem;
+  padding-top: 6.25rem;
+}
+
+@media screen and (min-width: 850px){
+  #main-home {
+    background-image: url("../../libraries/images/bg-intro-desktop.png");
+    background-size: contain;
+    padding: 0 1.5625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

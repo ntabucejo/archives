@@ -1,0 +1,10 @@
+@mixin center-content($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+
+  @if $direction == colmn {
+    flex-direction: $direction;
+  }
+}

@@ -1,0 +1,83 @@
+@use '../utilities/variables';
+
+.poster {
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+  }
+
+  &__join-us {
+    padding: 2.5rem 2.1875rem;
+    background: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    grid-area: joinUs;
+
+    .poster__heading-1 {
+      color: variables.$cyan;
+    }
+
+    .poster__heading-2 {
+      color: variables.$bright-yellow;
+    }
+
+    .poster__description {
+      color: variables.$grey;
+    }
+  }
+  &__subscription {
+    padding: 2.5rem 2.1875rem;
+    background: variables.$cyan;
+    border-bottom-left-radius: 10px;
+    grid-area: subscription;
+    .poster__heading-2 {
+      color: variables.$light-gray;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem
+    }
+    span {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+  &__why-us {
+    background: variables.$grayish-blue;
+    border-bottom-right-radius: 10px;    
+    padding: 2.5rem 2.1875rem;
+    padding-right: 4.369rem;
+    grid-area: whyUs;
+  }
+
+  max-width: 39.75rem;
+  min-height: 29.8125rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  'joinUs joinUs'
+  'subscription whyUs';
+}
+
+@media screen and (max-width: 400px) {
+  .poster {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'joinUs'
+    'subscription'
+    'whyUs';
+
+    &__subscription {
+      border-bottom-left-radius: 0;
+    }
+
+    &__why-us {
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+}

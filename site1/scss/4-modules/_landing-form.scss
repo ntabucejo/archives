@@ -1,0 +1,150 @@
+@use '../1-helpers/variables' as *;
+
+.landing-form {
+  // max-width: 20.4375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.welcome {
+  margin-bottom: 4.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  p, h1 {
+    text-align: center;
+  }
+}
+
+.try-it {
+  background-color: $blue;
+  box-shadow: 0px 8px rgba(black, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  margin-bottom: 1.5625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+  }
+}
+
+.registration-form {
+  background-color: $white;
+  box-shadow: 0px 8px rgba(black, 0.2);
+  border-radius: 10px;
+  padding: 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .field {
+    position: relative;
+    height: 3.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid $grayish-blue;
+
+    input {
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      padding: 1.4375rem 1.25rem;
+    }
+
+    img {
+      margin-right: 1.5rem;
+      visibility: hidden;
+    }
+
+    p {
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translateY(100%)
+    }
+  }
+
+  .submit-field {
+    height: 3.375rem;
+    .registration-form__cta {
+      background-color: $green;
+      border-radius: 5px;
+      box-shadow: 0px -2px inset rgba(black,0.2);
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+    }
+  }
+
+  p {
+    text-align: center
+  }
+}
+
+@media screen and (min-width: 850px){
+  .welcome {
+    grid-area: wel;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    h1 {
+      font-size: 3.05rem;
+      text-align: initial;
+    }
+    p {
+      text-align: initial;
+    }
+  }
+  .try-it {
+    grid-area: try;
+    height: 3.875rem;
+  }
+  .registration-form {
+    padding: 2.5rem;
+    grid-area: reg;
+    grid-gap: 1.3125rem;
+    // grid-gap: 2.625rem;
+
+    .field {
+      position: relative;
+      
+      img {
+        display: block;
+        visibility: hidden;
+      }
+      p {
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateY(100%)
+      }
+    }
+  }
+  .landing-form {
+    max-width: 69.375rem;
+    // max-height: 18.75rem;
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas:
+    'wel try'
+    'wel reg' ;
+  }
+}

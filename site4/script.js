@@ -1,0 +1,1 @@
+document.getElementById('main-content__image--img').style.transform = 'rotate(360000deg)';

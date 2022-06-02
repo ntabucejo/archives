@@ -1,0 +1,24 @@
+@use '..//utilities/variables';
+
+.poster {
+  font-family: variables.$primary-font-family;
+
+  &__heading-1 {
+    margin-bottom: 2.0625rem;
+  }
+
+  &__heading-2 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1rem;
+  }
+
+  .poster__description-2 {
+    color: variables.$light-gray;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+}

@@ -1,0 +1,72 @@
+@use '../1-helpers/index' as *;
+
+.central {
+  @include center-content(column);
+  gap: 60px;
+  margin: 92px 0;
+  max-width: 327px;
+
+  .moto {
+    text-align: center;
+    @include center-content(column);
+    gap: 23px;
+  }
+
+  .offer {
+    @include center-content(column);
+    gap: 24px;
+
+    .offer__trial__cta {
+      background-color: $blue;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px 60px;
+    }
+
+    .offer__registration-form {
+      @include center-content(column);
+      gap: 15px;
+      background-color: $white;
+      border-radius: 10px;
+      box-shadow: 0px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      padding: 24px;
+
+      .field {
+        @include center-content(row);
+        position: relative;
+        width: 100%;
+        height: 57px;
+        border: 1px solid $grayish-blue;
+        border-radius: 5px;
+        
+        input {
+          padding-left: 20px; 
+          border: none;
+          border-radius: 5px;
+          width: 100%;
+          height: 100%;
+        }
+
+        .error {
+          display: none;
+        }
+      }
+
+      .regiter-cta {
+        width: 100%;
+        height: 56px;
+        border: none;
+        border-radius: 5px;
+        background-color: $green;
+        box-shadow: 0px -4px inset rgba(0, 0, 0, 0.1);
+        letter-spacing: 1px;
+      }
+
+      small {
+        text-align: center;
+      }
+    }
+  }
+}
