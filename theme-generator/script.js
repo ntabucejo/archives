@@ -44,6 +44,6 @@ function generate() {
   let randomNumberDeveloperList = Math.floor(
     Math.random() * developerList.length
   )
-  document.getElementById('developer-generator').innerHTML =
-    developerList[randomNumberDeveloperList]
+  // document.getElementById('developer-generator').innerHTML =
+  //   developerList[randomNumberDeveloperList]
 }
