@@ -1,0 +1,178 @@
+@keyframes sun-glow {
+  0% {
+    box-shadow: 0px 0px 10px 5px yellow;
+  }
+  50% {
+    box-shadow: 0px 0px 5px 1px rgb(255, 81, 0);
+  }
+  100% {
+    box-shadow: 0px 0px 10px 5px yellow;
+  }
+}
+
+
+
+
+
+@keyframes planet {
+  from {
+      transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes moon {
+  from {
+      transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes phobos {
+  from {
+      transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+@keyframes deimos {
+  from {
+      transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+
+
+
+
+
+
+
+@keyframes orbit-mercury {
+  from {
+      transform: rotate(80deg)
+  }
+  to {
+    transform: rotate(440deg)
+  }
+}
+
+@keyframes orbit-venus {
+  from {
+      transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes orbit-earth {
+  from {
+      transform: rotate(175deg)
+  }
+  to {
+    transform: rotate(535deg)
+  }
+}
+
+@keyframes orbit-moon {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+@keyframes orbit-moon-darkside {
+  from {
+    transform: rotate(360deg)
+  }
+  to {
+    transform: rotate(0deg)
+  }
+}
+
+@keyframes orbit-mars {
+  from {
+      transform: rotate(260deg)
+  }
+  to {
+    transform: rotate(620deg)
+  }
+}
+@keyframes orbit-phobos {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+@keyframes orbit-phobos-darkside {
+  from {
+    transform: rotate(360deg)
+  }
+  to {
+    transform: rotate(0deg)
+  }
+}
+@keyframes orbit-deimos {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+@keyframes orbit-deimos-darkside {
+  from {
+    transform: rotate(360deg)
+  }
+  to {
+    transform: rotate(0deg)
+  }
+}
+
+@keyframes orbit-jupiter {
+  from {
+      transform: rotate(60deg)
+  }
+  to {
+    transform: rotate(420deg)
+  }
+}
+
+@keyframes orbit-saturn {
+  from {
+      transform: rotate(75deg)
+  }
+  to {
+    transform: rotate(435deg)
+  }
+}
+
+@keyframes orbit-uranus {
+  from {
+      transform: rotate(320deg)
+  }
+  to {
+    transform: rotate(680deg)
+  }
+}
+
+@keyframes orbit-neptune {
+  from {
+      transform: rotate(30deg)
+  }
+  to {
+    transform: rotate(390deg)
+  }
+}

@@ -1,0 +1,246 @@
+@use '../assistant/index' as *;
+
+.solar-system {
+  @include flexer(center);
+  z-index: 1;
+
+  // Sun
+  .sun {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 1px 1px 10px 5px yellow;
+    @include animator(sun-glow, 3s);
+    animation-timing-function: ease-in-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // Mercury
+  .orbit-mercury {
+    @include orbit(120px);
+    @include animator(orbit-mercury, 3s);
+    z-index: 8;
+
+    .planet-mercury {
+      @include object(14px);
+
+      img {
+        @include animator(planet, 12s);
+      }
+    }
+    
+    .darkside {
+      @include darkside(365px, 14px);
+    }
+  }
+
+  // Venus
+  .orbit-venus {
+    @include orbit(176px);
+    @include animator(orbit-venus, 7s);
+    z-index: 7;
+
+    .planet-venus {
+      @include object(20px);
+
+      img {
+        @include animator(planet, 12s);
+      }
+    }
+    
+    .darkside {
+      @include darkside(337px, 20px);
+    }
+  }
+
+  // Earth
+  .orbit-earth {
+    @include orbit(240px);
+    @include animator(orbit-earth, 12s);
+    z-index: 6;
+      
+    .planet-earth {
+      @include object(20px);
+      
+      img {
+        @include animator(planet, 12s);
+      }
+      
+      // Earth Moon
+      .orbit-moon {
+        @include orbit(36px);
+        @include animator(orbit-moon, 1s);
+        z-index: 6;
+        
+        .moon {
+          @include object(6px);
+
+          img {
+            @include animator(moon, 12s);
+          }
+        }
+        
+        .darkside-moon {
+          @include darkside(100%, 6px);
+          transform-origin: center left;
+          @include animator(orbit-moon-darkside, 1s);
+        }
+      }
+    }
+
+    .darkside {
+      @include darkside(305px, 20px);  
+    }
+
+  }
+
+  .orbit-mars {
+    @include orbit(340px);
+    @include animator(orbit-mars, 22s);
+    z-index: 5;
+      
+    .planet-mars {
+      @include object(16px);
+
+      img {
+        @include animator(planet, 12s);
+      }
+      
+      // Earth Moon
+      .orbit-phobos {
+        @include orbit(32px);
+        @include animator(orbit-phobos, 1s);
+        z-index: 5;
+        
+        .phobos {
+          @include object(8px);
+
+          img {
+            @include animator(phobos, 12s);
+          }
+        }
+        
+        .darkside-phobos {
+          @include darkside(100%, 8px);
+          transform-origin: center left;
+          @include animator(orbit-phobos-darkside, 1s);
+        }
+      }
+      
+      .orbit-deimos {
+        @include orbit(52px);
+        @include animator(orbit-deimos, 3s);
+        z-index: 5;
+        
+        .deimos {
+          @include object(8px);
+          
+          img {
+            @include animator(deimos, 12s);
+          }
+        }
+        
+        .darkside-deimos {
+          @include darkside(100%, 8px);
+          transform-origin: center left;
+          @include animator(orbit-deimos-darkside, 3s);
+        }
+      }
+    }
+
+    .darkside {
+      @include darkside(255px, 16px);
+    }
+
+  }
+
+  .orbit-jupiter {
+    @include orbit(500px);
+    @include animator(orbit-jupiter, 144s);
+    z-index: 4;
+
+    .planet-jupiter {
+      @include object(46px);
+
+      img {
+        @include animator(planet, 12s);
+      }
+    }
+    
+    .darkside {
+      @include darkside(175px, 46px);
+    }
+  }
+
+  .orbit-saturn {
+    @include orbit(640px);
+    @include animator(orbit-saturn, 348s);
+    z-index: 3;
+
+    .planet-saturn {
+      @include object(34px);
+      
+      img {
+        @include animator(planet, 12s);
+      }
+
+      .ring {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        border-radius: 100%;
+        box-shadow: 0px 0px 5px 2px inset rgb(0, 255, 0);
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    
+    .darkside {
+      @include darkside(105px, 34px);
+    }
+  }
+
+  .orbit-uranus {
+    @include orbit(750px);
+    @include animator(orbit-uranus, 1008s);
+    z-index: 2;
+
+    .planet-uranus {
+      @include object(28px);
+
+      img {
+        @include animator(planet, 12s);
+      }
+    }
+    
+    .darkside {
+      @include darkside(50px, 28px);
+    }
+  }
+
+  .orbit-neptune {
+    @include orbit(850px);
+    @include animator(orbit-neptune, 1980s);
+    z-index: 1;
+
+    .planet-neptune {
+      @include object(28px);
+      
+      img {
+        @include animator(planet, 12s);
+      }
+    }
+    
+    .darkside {
+      @include darkside(25px, 28px);
+    }
+  }
+}
